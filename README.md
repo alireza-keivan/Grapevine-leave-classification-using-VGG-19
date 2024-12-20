@@ -1,4 +1,4 @@
----
+![samples nazli](https://github.com/user-attachments/assets/e56ead93-0ae4-4f67-825e-a5e03232f436)![samples dimnit](https://github.com/user-attachments/assets/d8bb7cb1-bd79-49e6-9a82-85c2965ff667)![samples buzgulu](https://github.com/user-attachments/assets/d3137867-7867-4287-bc7b-985cbe8c47e6)![samples ala0idris](https://github.com/user-attachments/assets/d826f394-6184-442d-81d9-40ba972e4266)![samples ak](https://github.com/user-attachments/assets/3b8d3738-dc5e-465a-8f96-677f41135352)![samples 1 ](https://github.com/user-attachments/assets/f7d83ebb-bc9a-43bf-9a21-c2006ffdbcc6)![samples 1 ](https://github.com/user-attachments/assets/48a9141c-759e-4881-a128-ffe98ae6697a)---
 
 # Grapevine Leaves Classification with Deep Learning
 
@@ -104,7 +104,15 @@ for img_name in data_df['image_names']:
 # Add these to the DataFrame
 data_df['class_labels'] = class_labels
 data_df['file_paths'] = file_paths
+
+plt.figure(figsize=(5,5))
+class_cnt = main_df.groupby(['classes']).size().reset_index(name = 'counts')
+colors = sns.color_palette('Paired')[0:9]
+plt.pie(class_cnt['counts'], labels=class_cnt['classes'], colors=colors, autopct='%1.1f%%')
+plt.legend(loc='upper right')
+plt.show()
 ```
+![image](https://github.com/alireza-keivan/leave-segmentation/blob/main/src/pie.png)
 Here, we process the dataset by extracting class labels (based on file names) and constructing full file paths for loading images later.
 
 #### Dataset Inspection
@@ -116,12 +124,19 @@ print("Missing Values:\n", missing_values)
 # Print the number of unique classes
 unique_classes = len(data_df['class_labels'].value_counts())
 print('Number of Unique Leaf Classes:', unique_classes)
-
+```
+![image](https://github.com/alireza-keivan/leave-segmentation/blob/main/src/samples%20ak.png)
+![image](https://github.com/alireza-keivan/leave-segmentation/blob/main/src/samples%20ala0idris.png)
+![image](https://github.com/alireza-keivan/leave-segmentation/blob/main/src/samples%20buzgulu.png)
+![image](https://github.com/alireza-keivan/leave-segmentation/blob/main/src/samples%20dimnit.png)
+![image](https://github.com/alireza-keivan/leave-segmentation/blob/main/src/samples%20nazli.png)
+```python
 # Class Distribution
 class_distribution = data_df['class_labels'].value_counts()
 print("Class Distribution:\n", class_distribution)
 ```
 This step ensures there are no missing values and provides an overview of the dataset structure.
+
 
 ---
 
@@ -152,6 +167,7 @@ for bar in dist_plot.patches:
 
 sns.despine()
 ```
+![image](https://github.com/alireza-keivan/leave-segmentation/blob/main/src/samples%201%20.png)
 This visualization shows the distribution of leaf classes and ensures balanced data representation.
 
 ---
@@ -173,7 +189,7 @@ vgg_datagen = ImageDataGenerator(
 ) 
 ```
 We apply augmentation techniques like rotation, zoom, brightness adjustment, and flips to make the model more robust to unseen data.
-
+![image](https://github.com/alireza-keivan/leave-segmentation/blob/main/src/Augmented%20images.png)
 ---
 
 ### 6. Transfer Learning with VGG19
@@ -224,3 +240,5 @@ plt.ylabel('Loss')
 plt.xlabel('Epoch')
 plt.show()
 ```
+![image](https://github.com/alireza-keivan/leave-segmentation/blob/main/src/Model%20accuracy.png)
+![image](https://github.com/alireza-keivan/leave-segmentation/blob/main/src/Model%20loss.png)
