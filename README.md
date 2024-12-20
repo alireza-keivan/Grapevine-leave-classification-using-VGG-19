@@ -1,5 +1,3 @@
-![samples nazli](https://github.com/user-attachments/assets/e56ead93-0ae4-4f67-825e-a5e03232f436)![samples dimnit](https://github.com/user-attachments/assets/d8bb7cb1-bd79-49e6-9a82-85c2965ff667)![samples buzgulu](https://github.com/user-attachments/assets/d3137867-7867-4287-bc7b-985cbe8c47e6)![samples ala0idris](https://github.com/user-attachments/assets/d826f394-6184-442d-81d9-40ba972e4266)![samples ak](https://github.com/user-attachments/assets/3b8d3738-dc5e-465a-8f96-677f41135352)![samples 1 ](https://github.com/user-attachments/assets/f7d83ebb-bc9a-43bf-9a21-c2006ffdbcc6)![samples 1 ](https://github.com/user-attachments/assets/48a9141c-759e-4881-a128-ffe98ae6697a)---
-
 # Grapevine Leaves Classification with Deep Learning
 
 This project focuses on classifying grapevine leaves into different classes using **Deep Learning** techniques. The project leverages **Transfer Learning** with the **VGG19** architecture and includes detailed visualizations, data preprocessing, and model evaluation.
