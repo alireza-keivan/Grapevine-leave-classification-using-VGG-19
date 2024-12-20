@@ -2,6 +2,8 @@
 
 This project focuses on classifying grapevine leaves into different classes using **Deep Learning** techniques. The project leverages **Transfer Learning** with the **VGG19** architecture and includes detailed visualizations, data preprocessing, and model evaluation.
 
+## Note: Due to lengthiness problem unnecessary plots are not placed in this Readme file. you can see the whole project in the Jupyter notebook file. 
+
 ---
 
 ## 📘 Overview
