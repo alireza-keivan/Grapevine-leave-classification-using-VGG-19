@@ -69,6 +69,7 @@ plt.legend(loc='upper right')
 plt.show()
 ```
 ![image](https://github.com/alireza-keivan/leave-segmentation/blob/main/src/pie.png)
+
 Here, we process the dataset by extracting class labels (based on file names) and constructing full file paths for loading images later.
 
 #### Dataset Inspection
@@ -93,7 +94,7 @@ This step ensures there are no missing values and provides an overview of the da
 
 ---
 
-### 3. Data Visualization (Inspired by Kaggle Work)
+### 3. Data Visualization
 #### Distribution of Classes
 ```python
 sns.set_theme(style="whitegrid", palette="pastel", font="serif")
@@ -121,6 +122,7 @@ for bar in dist_plot.patches:
 sns.despine()
 ```
 ![image](https://github.com/alireza-keivan/leave-segmentation/blob/main/src/samples%201%20.png)
+
 This visualization shows the distribution of leaf classes and ensures balanced data representation.
 
 ---
