@@ -56,27 +56,10 @@ The dataset path is defined, and each subdirectory corresponds to a specific gra
 ```python
 data_df = pd.DataFrame()
 
-# Combine image file names into a list
-data_df['image_names'] = (
-    os.listdir(PATH_AK) 
-    + os.listdir(PATH_ALA_IDRIS) 
-    + os.listdir(PATH_BUZGULU) 
-    + os.listdir(PATH_DIMNIT) 
-    + os.listdir(PATH_NAZLI)
-)
-
-# Extract class labels and file paths
-class_labels = []
-file_paths = []
-
 for img_name in data_df['image_names']:
     label = img_name.split(' (')[0]  # Extract class label
     class_labels.append(label)
     file_paths.append(os.path.join(BASE_PATH, label, img_name))
-
-# Add these to the DataFrame
-data_df['class_labels'] = class_labels
-data_df['file_paths'] = file_paths
 
 plt.figure(figsize=(5,5))
 class_cnt = main_df.groupby(['classes']).size().reset_index(name = 'counts')
@@ -98,11 +81,8 @@ print("Missing Values:\n", missing_values)
 unique_classes = len(data_df['class_labels'].value_counts())
 print('Number of Unique Leaf Classes:', unique_classes)
 ```
-![image](https://github.com/alireza-keivan/leave-segmentation/blob/main/src/samples%20ak.png)
-![image](https://github.com/alireza-keivan/leave-segmentation/blob/main/src/samples%20ala0idris.png)
-![image](https://github.com/alireza-keivan/leave-segmentation/blob/main/src/samples%20buzgulu.png)
-![image](https://github.com/alireza-keivan/leave-segmentation/blob/main/src/samples%20dimnit.png)
-![image](https://github.com/alireza-keivan/leave-segmentation/blob/main/src/samples%20nazli.png)
+![image](https://github.com/alireza-keivan/Grapevine-leave-classification-using-VGG-19/blob/main/src/overall2.png)
+
 ```python
 # Class Distribution
 class_distribution = data_df['class_labels'].value_counts()
