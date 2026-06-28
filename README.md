@@ -33,54 +33,7 @@ This project demonstrates an end-to-end deep learning workflow for classifying g
 
 ## 🔧 Steps in the Project
 
-### 1. Importing Libraries
-```python
-import os
-import gc
-import sys
-import random
-import pickle
-
-import pandas as pd
-import numpy as np
-
-import tensorflow as tf
-from tensorflow.keras import layers
-from tensorflow.keras.models import Sequential, Model
-from tensorflow.keras.preprocessing import image
-from tensorflow.keras.layers import (
-    Input, Dense, Activation, Dropout, Flatten, BatchNormalization,
-    Conv2D, MaxPooling2D, AveragePooling2D, GlobalAveragePooling2D
-)
-from tensorflow.keras.applications import VGG19, ResNet50
-from tensorflow.keras.applications.imagenet_utils import preprocess_input
-
-# Visualization
-import matplotlib.pyplot as plt
-import seaborn as sns
-from livelossplot import PlotLossesKeras
-
-from skimage.feature import hog, canny
-from skimage.filters import sobel
-from skimage import color
-
-from sklearn.preprocessing import LabelEncoder, OneHotEncoder
-from sklearn.model_selection import train_test_split
-
-from PIL import Image
-import cv2
-
-from tf_explain.core.activations import ExtractActivations
-from tf_explain.core.grad_cam import GradCAM
-
-from tensorflow.keras.utils import get_file
-from keras.preprocessing.image import ImageDataGenerator
-```
-This section imports all the necessary libraries for data handling, visualization, and building deep learning models.  
-
----
-
-### 2. Dataset and Paths
+### 1. Dataset and Paths
 ```python
 BASE_PATH = r'YOUR_PATH_TO_DATASET'
 PATH_AK = os.path.join(BASE_PATH, 'Ak')
@@ -93,7 +46,7 @@ The dataset path is defined, and each subdirectory corresponds to a specific gra
 
 ---
 
-### 3. Data Preparation
+### 2. Data Preparation
 #### Combine Image File Names and Extract Metadata
 ```python
 data_df = pd.DataFrame()
@@ -155,7 +108,7 @@ This step ensures there are no missing values and provides an overview of the da
 
 ---
 
-### 4. Data Visualization (Inspired by Kaggle Work)
+### 3. Data Visualization (Inspired by Kaggle Work)
 #### Distribution of Classes
 ```python
 sns.set_theme(style="whitegrid", palette="pastel", font="serif")
@@ -187,7 +140,7 @@ This visualization shows the distribution of leaf classes and ensures balanced d
 
 ---
 
-### 5. Image Augmentation
+### 4. Image Augmentation
 #### Data Augmentation Using `ImageDataGenerator`
 ```python
 vgg_datagen = ImageDataGenerator(
@@ -207,7 +160,7 @@ We apply augmentation techniques like rotation, zoom, brightness adjustment, and
 ![image](https://github.com/alireza-keivan/leave-segmentation/blob/main/src/Augmented%20images.png)
 ---
 
-### 6. Transfer Learning with VGG19
+### 5. Transfer Learning with VGG19
 #### Building the Model
 ```python
 vgg19 = VGG19(include_top = False, input_shape = (227,227,3), weights = 'imagenet')
@@ -236,7 +189,7 @@ The model is compiled and trained using the Adam optimizer for 50 epochs, with a
 
 ---
 
-### 7. Model Evaluation
+### 6. Model Evaluation
 #### Plotting Accuracy and Loss
 ```python
 plt.figure(figsize=(15,5))
