@@ -142,7 +142,7 @@ vgg_datagen = ImageDataGenerator(
 ) 
 ```
 We apply augmentation techniques like rotation, zoom, brightness adjustment, and flips to make the model more robust to unseen data.
-![image](https://github.com/alireza-keivan/leave-segmentation/blob/main/src/Augmented%20images.png)
+![image](https://github.com/alireza-keivan/Grapevine-leave-classification-using-VGG-19/blob/main/src/Screenshot%20from%202026-06-28%2016-19-37.png)
 
 ---
 
