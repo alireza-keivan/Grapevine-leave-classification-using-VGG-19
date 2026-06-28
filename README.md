@@ -1,4 +1,9 @@
 # Grapevine Leaves Classification with Deep Learning
+* TensorFlow
+* Keras
+* Transfer Learning
+* Computer Vision
+* Deep Learning
 
 ## Business problem
 Manual classification of grapevine leaf varieties is often time-consuming and requires expertise. This project demonstrates how transfer learning with VGG19 can automatically classify grapevine leaf images. It offers a foundation for agricultural quality control and smart farming applications.
