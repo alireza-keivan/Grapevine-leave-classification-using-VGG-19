@@ -39,35 +39,16 @@ This project demonstrates an end-to-end deep learning workflow for classifying g
 ## 🔧 Steps in the Project
 
 ### 1. Dataset and Paths
-```python
-BASE_PATH = r'YOUR_PATH_TO_DATASET'
-PATH_AK = os.path.join(BASE_PATH, 'Ak')
-PATH_ALA_IDRIS = os.path.join(BASE_PATH, 'Ala_Idris')
-PATH_BUZGULU = os.path.join(BASE_PATH, 'Buzgulu')
-PATH_DIMNIT = os.path.join(BASE_PATH, 'Dimnit')
-PATH_NAZLI = os.path.join(BASE_PATH, 'Nazli')
-```
+
 The dataset path is defined, and each subdirectory corresponds to a specific grapevine leaf class.
 
 ---
 
-### 2. Data Preparation
+### 2. Data Organization
 #### Combine Image File Names and Extract Metadata
-```python
-data_df = pd.DataFrame()
 
-for img_name in data_df['image_names']:
-    label = img_name.split(' (')[0]  # Extract class label
-    class_labels.append(label)
-    file_paths.append(os.path.join(BASE_PATH, label, img_name))
+The dataset consists of five grapevine leaf classes. Images are automatically indexed and grouped into a structured dataframe for downstream preprocessing and training.
 
-plt.figure(figsize=(5,5))
-class_cnt = main_df.groupby(['classes']).size().reset_index(name = 'counts')
-colors = sns.color_palette('Paired')[0:9]
-plt.pie(class_cnt['counts'], labels=class_cnt['classes'], colors=colors, autopct='%1.1f%%')
-plt.legend(loc='upper right')
-plt.show()
-```
 ![image](https://github.com/alireza-keivan/leave-segmentation/blob/main/src/pie.png)
 
 Here, we process the dataset by extracting class labels (based on file names) and constructing full file paths for loading images later.
@@ -173,7 +154,7 @@ history_vgg = model_vgg.fit(
       epochs=50,
       verbose=2)
 ```
-The model is compiled and trained using the Adam optimizer for 50 epochs, with accuracy and loss tracked.
+The model was trained using the Adam optimizer for 50 epochs while monitoring validation accuracy and loss.
 
 ---
 
@@ -208,3 +189,22 @@ plt.show()
     <img src="https://github.com/alireza-keivan/Grapevine-leave-classification-using-VGG-19/blob/main/src/confusion.png" alt="Framed Image" width="800">
   </kbd>
 </p>
+
+# 🚀 Key Takeaways
+
+- Developed an end-to-end deep learning pipeline using TensorFlow and Keras.
+- Applied transfer learning with VGG19 to classify five grapevine leaf varieties.
+- Improved model robustness using image augmentation techniques.
+- Evaluated model performance using training history and confusion matrix visualization.
+
+- ## 🛠 Technologies
+
+- Python
+- TensorFlow
+- Keras
+- NumPy
+- Pandas
+- OpenCV
+- Matplotlib
+- Seaborn
+- Scikit-learn
