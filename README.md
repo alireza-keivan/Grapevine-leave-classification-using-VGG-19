@@ -6,8 +6,6 @@ Manual classification of grapevine leaf varieties is often time-consuming and re
 ## Objective
 Develop a deep learning image classification model capable of accurately distinguishing different grapevine leaf classes using transfer learning.
 
-## Note: Due to lengthiness problem unnecessary plots are not placed in this Readme file. you can see the whole project in the Jupyter notebook file. 
-
 ---
 
 ## 📘 Overview
