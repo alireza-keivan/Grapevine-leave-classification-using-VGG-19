@@ -203,6 +203,6 @@ plt.show()
 
 <p align="center">
   <kbd>
-    <imghttps://github.com/alireza-keivan/Grapevine-leave-classification-using-VGG-19/blob/main/src/confusion.png
+    <img src="https://github.com/alireza-keivan/Grapevine-leave-classification-using-VGG-19/blob/main/src/confusion.png" alt="Framed Image" width="800">
   </kbd>
 </p>
