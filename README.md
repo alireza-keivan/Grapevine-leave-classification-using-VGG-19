@@ -10,6 +10,19 @@ Develop a deep learning image classification model capable of accurately disting
 
 ---
 
+## 📌 Project at a Glance
+
+| Feature | Details |
+|---------|---------|
+| **Problem** | Grapevine Leaf Image Classification |
+| **Approach** | Transfer Learning |
+| **Model** | VGG19 |
+| **Framework** | TensorFlow / Keras |
+| **Language** | Python |
+| **Dataset** | Grapevine Leaves Image Dataset |
+| **Number of Classes** | 5 |
+| **Task Type** | Multi-Class Image Classification |
+
 ## 📘 Overview
 
 The goal of this project is to classify grapevine leaves into 5 distinct classes using images provided in the **Grapevine Leaves Image Dataset**. The project includes:
