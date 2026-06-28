@@ -255,8 +255,9 @@ plt.ylabel('Loss')
 plt.xlabel('Epoch')
 plt.show()
 ```
-html<kbd>
-  <img src="https://github.com/alireza-keivan/leave-segmentation/blob/main/src/Model%20accuracy.png" alt="Framed Image" width="400">
+<kbd>
+  <img src="https://github.com/alireza-keivan/leave-segmentation/blob/main/src/Model%20accuracy.png" alt="Framed Image" width="800">
+  <img src="https://github.com/alireza-keivan/leave-segmentation/blob/main/src/Model%20loss.png" alt="Framed Image" width="800">
 </kbd>
 
 ![image](https://github.com/alireza-keivan/leave-segmentation/blob/main/src/Model%20accuracy.png)
