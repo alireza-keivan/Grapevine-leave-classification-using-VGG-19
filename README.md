@@ -16,7 +16,6 @@ The goal of this project is to classify grapevine leaves into 5 distinct classes
 - Extensive **Exploratory Data Analysis (EDA)** with **Seaborn** and **Matplotlib**.
 - An **Image Augmentation Pipeline** for robust model training.
 - A **Deep Learning Model** built using **Transfer Learning** with **VGG19**.
-- Visualizations inspired by [this Kaggle notebook](https://www.kaggle.com/code/dj67rockers/leaves-classification).
 
 ---
 
