@@ -163,6 +163,7 @@ vgg_datagen = ImageDataGenerator(
 ```
 We apply augmentation techniques like rotation, zoom, brightness adjustment, and flips to make the model more robust to unseen data.
 ![image](https://github.com/alireza-keivan/leave-segmentation/blob/main/src/Augmented%20images.png)
+
 ---
 
 ### 5. Transfer Learning with VGG19
