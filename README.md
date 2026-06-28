@@ -14,7 +14,7 @@ Manual classification of grapevine leaf varieties is often time-consuming and re
 Develop a deep learning image classification model capable of accurately distinguishing different grapevine leaf classes using transfer learning.
 
 
-![image](https://github.com/alireza-keivan/Grapevine-leave-classification-using-VGG-19/blob/main/src/overall%20procedure.png)
+![image](https://github.com/alireza-keivan/Grapevine-leave-classification-using-VGG-19/blob/main/src/complete.png)
 ---
 
 ## 📌 Project at a Glance
