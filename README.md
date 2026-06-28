@@ -4,10 +4,11 @@
 Manual classification of grapevine leaf varieties is often time-consuming and requires expertise. This project demonstrates how transfer learning with VGG19 can automatically classify grapevine leaf images. It offers a foundation for agricultural quality control and smart farming applications.
 
 
-![image](https://github.com/alireza-keivan/Grapevine-leave-classification-using-VGG-19/blob/main/src/overall%20procedure.png)
+
 ## Objective
 Develop a deep learning image classification model capable of accurately distinguishing different grapevine leaf classes using transfer learning.
-
+---
+![image](https://github.com/alireza-keivan/Grapevine-leave-classification-using-VGG-19/blob/main/src/overall%20procedure.png)
 ---
 
 ## 📌 Project at a Glance
@@ -25,10 +26,7 @@ Develop a deep learning image classification model capable of accurately disting
 
 ## 📘 Overview
 
-The goal of this project is to classify grapevine leaves into 5 distinct classes using images provided in the **Grapevine Leaves Image Dataset**. The project includes:
-- Extensive **Exploratory Data Analysis (EDA)** with **Seaborn** and **Matplotlib**.
-- An **Image Augmentation Pipeline** for robust model training.
-- A **Deep Learning Model** built using **Transfer Learning** with **VGG19**.
+This project demonstrates an end-to-end deep learning workflow for classifying grapevine leaf varieties using transfer learning with VGG19. It covers data preprocessing, augmentation, model training, evaluation, and prediction.
 
 ---
 
